@@ -10,24 +10,32 @@
 <h1>Binder</h1>
 
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Featured')">Featured</button>
+  <button class="tablinks active" onclick="openTab(event, 'Featured')">Featured</button>
   <button class="tablinks" onclick="openTab(event, 'Markets')">Markets</button>
   <button class="tablinks" onclick="openTab(event, 'Locals')">Locals</button>
 </div>
 
-<div id="Featured" class="tabcontent">
+<!--Initially show featured tab-->
+<div id="Featured" class="tabcontent" style="display: block;">
   <h3>Featured</h3>
-  <p>Featured cards for sale</p>
+	<ul class="flex-container">
+		<li class="flex-item">1</li>
+	  <li class="flex-item">2</li>
+	  <li class="flex-item">3</li>
+	  <li class="flex-item">4</li>
+	  <li class="flex-item">5</li>
+	  <li class="flex-item">6</li>
+		<!-- <p>Featured cards for sale</p> -->
+	</ul>
 </div>
-
 <div id="Markets" class="tabcontent">
   <h3>Markets</h3>
-  <p>Paris is the capital of France.</p>
+	<p>Featured cards for sale</p>
 </div>
 
 <div id="Locals" class="tabcontent">
   <h3>Locals</h3>
-  <p>Tokyo is the capital of Japan.</p>
+		<p>Featured cards for sale</p>
 </div>
 </body>
 </html>
