@@ -48,12 +48,13 @@ div.tab button.active {
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
-  margin:10px auto;
+  margin:0px auto;
+  padding-left:20px;
   
 }
 .container-1 input#search{
   width: 300px;
-  height: 50px;
+  height: 40px;
   background: #2b303b;
   border: none;
   font-size: 10pt;
@@ -68,7 +69,7 @@ div.tab button.active {
   position: absolute;
   top: 50%;
   margin-left: 17px;
-  margin-top: 17px;
+  margin-top: 10px;
   z-index: 1;
   color: #4f5b66;
 }
