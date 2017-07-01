@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Binder</title>
-	<link href ="styles/custom.css" rel="stylesheet">
-	<script src="js/custom.js"></script>
+  <title>Binder</title>
+  <link href ="styles/custom.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="js/custom.js"></script>
 </head>
 
 <body>
-<h1>Binder</h1>
-
-<div class="tab">
+  
+  <div class="Header"> <h1 style="float:left;">Binder</h1>
+    <div class="box">
+      <div class="container-1">
+       <span class="icon"><i class="fa fa-search"></i></span>
+        <input type="search" id="search" placeholder="Search..." />
+      </div>
+      </div>
+ </div> 
+  
+  <div style="clear:both;"  class="tab">
   <button class="tablinks" onclick="openTab(event, 'Featured')">Featured</button>
   <button class="tablinks" onclick="openTab(event, 'Markets')">Markets</button>
   <button class="tablinks" onclick="openTab(event, 'Locals')">Locals</button>
