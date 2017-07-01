@@ -4,11 +4,13 @@
 	<title>Binder</title>
 	<link href ="styles/custom.css" rel="stylesheet">
   <link rel="stylesheet" href = "https://bootswatch.com/slate/bootstrap.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="js/custom.js"></script>
 </head>
 
 
+
+<!-- Use any element to open the sidenav -->
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -44,26 +46,36 @@
     </nav>
 
 <body>
-	
+	  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+    <span onclick="openNav()"></span>
+    </div>
+    <div id= "main">
 <div class="tab">
   <button class="tablinks active" onclick="openTab(event, 'Featured')">Featured</button>
   <button class="tablinks" onclick="openTab(event, 'Markets')">Markets</button>
   <button class="tablinks" onclick="openTab(event, 'Locals')">Locals</button>
 </div>
 
+
 <!--Initially show featured tab-->
 <div id="Featured" class="tabcontent" style="display: block;">
   <h3>Featured</h3>
-	<ul class="flex-container">
-		<li class="flex-item">1</li>
-	  <li class="flex-item">2</li>
-	  <li class="flex-item">3</li>
-	  <li class="flex-item">4</li>
-	  <li class="flex-item">5</li>
-	  <li class="flex-item">6</li>
+
+  	<ul class="flex-container">
+  	<li class="flex-item" onclick="openNav()">1</li>
+	  <li class="flex-item" onclick="openNav()">2</li>
+	  <li class="flex-item" onclick="openNav()">3</li>
+	  <li class="flex-item" onclick="openNav()">4</li>
+	  <li class="flex-item" onclick="openNav()">5</li>
+	  <li class="flex-item" onclick="openNav()">6</li>
 		<!-- <p>Featured cards for sale</p> -->
+    </div>
 	</ul>
-</div>
 <div id="Markets" class="tabcontent">
   <h3>Markets</h3>
 	<p>Featured cards for sale</p>
@@ -73,5 +85,17 @@
   <h3>Locals</h3>
 		<p>Featured cards for sale</p>
 </div>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 </body>
 </html>
