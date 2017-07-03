@@ -49,6 +49,7 @@
   <button class="tablinks" onclick="openTab(event, 'Locals')">Locals</button>
 </div>
 
+
 <!--Initially show featured tab-->
 <div id="Featured" class="tabcontent" style="display: block;">
 	<ul class="flex-container">
@@ -63,8 +64,8 @@
 		<li class="flex-item">9</li>
 	  <li class="flex-item">10</li>
 		<!-- <p>Featured cards for sale</p> -->
+    </div>
 	</ul>
-</div>
 <div id="Markets" class="tabcontent">
 	<p>Featured cards for sale</p>
 </div>
@@ -72,5 +73,17 @@
 <div id="Locals" class="tabcontent">
 		<p>Featured cards for sale</p>
 </div>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 </body>
 </html>
