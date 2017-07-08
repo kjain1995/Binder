@@ -81,22 +81,14 @@ div.tab button.active {
   width: 99%;
   margin: auto;
   background-color: whitesmoke;
-
-
-  /*display: grid;
-  grid-row-gap: 0px;
-  grid-column-gap: 150px;*/
-/*grid-template-columns: 100px 100px 100px;*/
-
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
 }
 
 .flex-item {
   background: #19bc9d;
   padding: 5px;
-  width: 16%;
-  max-height: 17%;
+  width: 20%;
+  min-height: 215px;
+  max-height: 500px;
   margin: 10px;
 
   flex-shrink: 0;
@@ -232,6 +224,24 @@ div.tab button.active {
     margin-left: 50px;
 }
 
+.user-images {
+    display: block;
+
+    min-width: 55%;
+    max-width: 63%;
+
+    min-height: 171px;
+    max-height: 215px;
+}
+
+.card-description {
+  text-align: left;
+  padding: 0px;
+  list-style: none;
+  line-height: 30px;
+  display: table;
+  font-size: 14px;
+}
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
