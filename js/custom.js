@@ -1,3 +1,9 @@
+$( document ).ready(function() {
+  $('.user-images').click(function(){
+    openNav($(this).attr('src'));
+  });
+});
+
 function openTab(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -17,4 +23,15 @@ function openTab(evt, tabName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
+}
+
+function openNav(imgSrc) {
+    document.getElementById("mySidenav").style.width = "400px";
+    $("#main-image").attr('src', imgSrc);
+    document.getElementById("main").style.marginLeft = "400px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
 }

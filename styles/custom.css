@@ -212,6 +212,11 @@ div.tab button.active {
     margin-left: 50px;
 }
 
+#main-image {
+  margin-left: 50px;
+  width: 70%;
+  border-radius: 7px;
+}
 /*.user-images {
     display: inline-block;
     min-width: 55%;
@@ -220,6 +225,10 @@ div.tab button.active {
     min-height: 171px;
     max-height: 215px;
 }*/
+
+.user-images {
+    border-radius: 10px;
+}
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
