@@ -46,6 +46,21 @@
   <button class="tablinks active" onclick="openTab(event, 'Featured')">Featured</button>
   <button class="tablinks" onclick="openTab(event, 'Markets')">Markets</button>
   <button class="tablinks" onclick="openTab(event, 'Locals')">Locals</button>
+  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="kin@kinskards.com">
+
+    <!-- Specify a PayPal shopping cart View Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="display" value="1">
+
+    <!-- Display the View Cart button. -->
+    <input type="image" name="submit"
+        src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_viewcart_113x26.png"
+       alt="Add to Cart">
+    <img alt="" width="1" height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
 </div>
 
 <div id="mySidenav" class="sidenav">
@@ -55,6 +70,28 @@
   <a href="#">Level</a>
   <a href="#">Profile</a>
   <a href="#">Contact</a>
+
+  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" id="item_name" value="">
+  <input type="hidden" name="amount" id="amount" value="">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
   <span onclick="openNav()"></span>
 </div>
 <div id="main">
@@ -64,7 +101,7 @@
 			<li class="flex-item">
 			<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images" hspace="20">
+				alt="Smiley face" class="user-images" hspace="20" data-name="Test Card" data-price="5.00">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -74,7 +111,7 @@
 		  <li class="flex-item">
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=366293&type=card"
-				alt="Smiley face" class="user-images" hspace="20">
+				alt="Smiley face" class="user-images" hspace="20" data-name="Test Card 2" data-price="5.00">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -84,7 +121,7 @@
 		  <li class="flex-item">
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images" hspace="20">
+				alt="Smiley face" class="user-images" hspace="20" data-name="Test Card 3" data-price="5.00">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -94,7 +131,7 @@
 		  <li class="flex-item">
 			<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images"  hspace="20">
+				alt="Smiley face" class="user-images"  hspace="20" data-name="Test Card 4" data-price="5.00">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -104,7 +141,7 @@
 		  <li class="flex-item">
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images"  hspace="20">
+				alt="Smiley face" class="user-images"  hspace="20" data-name="Test Card 5"  data-price="5.00">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -114,7 +151,7 @@
 		  <li class="flex-item">
 			<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images"  hspace="20">
+				alt="Smiley face" class="user-images"  hspace="20" data-name="Test Card 6"  data-price="5.00">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -124,7 +161,7 @@
 			<li class="flex-item">
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images"  hspace="20">
+				alt="Smiley face" class="user-images"  hspace="20" data-name="Test Card 7" data-price="5.00">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -134,7 +171,7 @@
 		  <li class="flex-item" >
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images" hspace="20">
+				alt="Smiley face" class="user-images" hspace="20" data-name="Test Card 8"  data-price="5.00">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>

@@ -1,6 +1,7 @@
 $( document ).ready(function() {
   $('.user-images').click(function(){
     openNav($(this).attr('src'));
+    addCart($(this).attr('data-name'),$(this).attr('data-price'));
   });
 });
 
@@ -34,4 +35,9 @@ function openNav(imgSrc) {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
+}
+function addCart(name,price) {
+    document.forms[0].item_name.value = name;
+    document.forms[0].amount.value = price;
+
 }
