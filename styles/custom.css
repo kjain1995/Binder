@@ -176,6 +176,7 @@ div.tab button.active {
 
 /* The side navigation menu */
 .sidenav {
+    color: white;
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
@@ -193,7 +194,7 @@ div.tab button.active {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s
 }
@@ -215,7 +216,7 @@ div.tab button.active {
 #main-image {
   margin-left: 50px;
   width: 70%;
-  border-radius: 7px;
+  border-radius: 15px;
 }
 /*.user-images {
     display: inline-block;
@@ -246,4 +247,21 @@ ul.flex-container li {
     display: inline-block;
     vertical-align: top;
     text-align: center;
+}
+
+#viewCart {
+  float: right;
+  margin: 15px;
+}
+
+#addToCart {
+  margin: 10px 0px 10px 30px;
+}
+
+.dropdown-toggle:hover + .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu:hover {
+  display:block;
 }

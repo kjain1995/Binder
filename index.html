@@ -37,6 +37,30 @@
 				 <ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="#">Settings</a></li>
 					<li><a href="#about">Help</a></li>
+					<!-- <li>
+						<div class="dropdown">
+							<a href="#profile"  id="myAccount">
+								<i class="fa fa-user fa-lg"></i>&nbsp;&nbsp;
+								My Account
+								<i class="fa fa-chevron-down"></i>
+							</a>
+							<div class="dropdown-content">
+    						<p>Hello World!</p>
+  						</div>
+						</div>
+				</li> -->
+				<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Account <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">My Profile</a></li>
+              <li><a href="#">My Sell List</a></li>
+              <li><a href="#">My Buy List</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Account Settings</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -55,7 +79,7 @@
     <input type="hidden" name="display" value="1">
 
     <!-- Display the View Cart button. -->
-    <input type="image" name="submit"
+    <input id="viewCart" type="image" name="submit"
         src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_viewcart_113x26.png"
        alt="Add to Cart">
     <img alt="" width="1" height="1"
@@ -66,10 +90,10 @@
 <div id="mySidenav" class="sidenav">
 	<img id="main-image" src=""/>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">User Name</a>
-  <a href="#">Level</a>
-  <a href="#">Profile</a>
-  <a href="#">Contact</a>
+  <a id="sideName" href="#">Name</a>
+  <a id="sidePrice" href="#">Price</a>
+  <a id="sideCondition" href="#">Condition</a>
+  <a id="sideSeller" href="#">Seller</a>
 
   <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
@@ -86,7 +110,7 @@
   <input type="hidden" name="currency_code" value="USD">
 
   <!-- Display the payment button. -->
-  <input type="image" name="submit"
+  <input id="addToCart" type="image" name="submit"
     src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"
     alt="Add to Cart">
   <img alt="" width="1" height="1"
@@ -101,7 +125,7 @@
 			<li class="flex-item">
 			<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images" hspace="20" data-name="Test Card" data-price="5.00">
+				alt="Smiley face" class="user-images" hspace="20" data-name="Sea Sprite" data-price="$5.00" data-condition="Good">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -111,7 +135,7 @@
 		  <li class="flex-item">
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=366293&type=card"
-				alt="Smiley face" class="user-images" hspace="20" data-name="Test Card 2" data-price="5.00">
+				alt="Smiley face" class="user-images" hspace="20" data-name="Metropolis Sprite" data-price="$5.00" data-condition="Good">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -121,7 +145,7 @@
 		  <li class="flex-item">
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images" hspace="20" data-name="Test Card 3" data-price="5.00">
+				alt="Smiley face" class="user-images" hspace="20" data-name="Sea Sprite 1" data-price="$5.00" data-condition="Good">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -131,7 +155,7 @@
 		  <li class="flex-item">
 			<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images"  hspace="20" data-name="Test Card 4" data-price="5.00">
+				alt="Smiley face" class="user-images"  hspace="20" data-name="Sea Sprite 2" data-price="$5.00" data-condition="Good">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -141,7 +165,7 @@
 		  <li class="flex-item">
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images"  hspace="20" data-name="Test Card 5"  data-price="5.00">
+				alt="Smiley face" class="user-images"  hspace="20" data-name="Sea Sprite 3"  data-price="$5.00" data-condition="Mint">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -151,7 +175,7 @@
 		  <li class="flex-item">
 			<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images"  hspace="20" data-name="Test Card 6"  data-price="5.00">
+				alt="Smiley face" class="user-images"  hspace="20" data-name="Sea Sprite 4"  data-price="$5.00" data-condition="Old">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -161,7 +185,7 @@
 			<li class="flex-item">
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images"  hspace="20" data-name="Test Card 7" data-price="5.00">
+				alt="Smiley face" class="user-images"  hspace="20" data-name="Sea Sprite 5" data-price="$5.00" data-condition="Decent">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>
@@ -171,7 +195,7 @@
 		  <li class="flex-item" >
 				<a href="#">
 				<img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=159219&type=card"
-				alt="Smiley face" class="user-images" hspace="20" data-name="Test Card 8"  data-price="5.00">
+				alt="Smiley face" class="user-images" hspace="20" data-name="Sea Sprite 6"  data-price="$5.00" data-condition="Fair">
 				<h4>Name: </h4>
 				<p>Cost: </p>
 				<p>Condition: </p>

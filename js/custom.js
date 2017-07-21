@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   $('.user-images').click(function(){
-    openNav($(this).attr('src'));
+    openNav($(this).attr('src'), $(this).attr('data-name'), $(this).attr('data-price'), $(this).attr('data-condition'));
     addCart($(this).attr('data-name'),$(this).attr('data-price'));
   });
 });
@@ -26,9 +26,14 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-function openNav(imgSrc) {
+function openNav(imgSrc, cardName, cardPrice, cardCondition) {
     document.getElementById("mySidenav").style.width = "400px";
     $("#main-image").attr('src', imgSrc);
+    $("#sideName").html("Name: " + cardName);
+    $("#sidePrice").html("Price: " + cardPrice);
+    $("#sideCondition").html("Condition: " + cardCondition);
+
+    console.log ($("#sideName").html());
     document.getElementById("main").style.marginLeft = "400px";
 }
 
@@ -36,8 +41,8 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
 }
-function addCart(name,price) {
-    document.forms[0].item_name.value = name;
-    document.forms[0].amount.value = price;
-
+function addCart(name, price) {
+    //document.forms[0].item_name.value = name;
+    $('#item_name').value = name;
+    $('#amount').value = price;
 }
